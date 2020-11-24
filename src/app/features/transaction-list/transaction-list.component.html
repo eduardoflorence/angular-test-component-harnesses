@@ -1,0 +1,11 @@
+<mat-radio-group [formControl]="filterStatus" (change)="changeStatus()">
+  <mat-radio-button id="allFilter" [value]="'all'">Todas</mat-radio-button>
+  <mat-radio-button id="pendingFilter" [value]="'pending'">Pendentes</mat-radio-button>
+  <mat-radio-button id="completeFilter" [value]="'complete'">Completas</mat-radio-button>
+</mat-radio-group>
+
+<app-transaction-item 
+  *ngFor="let transactionItem of transactionItems;"
+  [item]='transactionItem'
+  (clickViewTransaction)='viewTransaction($event)'>
+</app-transaction-item>

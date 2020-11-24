@@ -1,0 +1,14 @@
+.item-container{
+  border: 1px solid slategray;
+  padding: .5rem 1rem;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: .25rem 0;
+
+  &.button{
+      justify-content: flex-end;
+  }
+}

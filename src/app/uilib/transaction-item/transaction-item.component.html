@@ -1,0 +1,13 @@
+<div class="item-container">
+  <div class="row">
+    <div class="date">{{item?.date | date }}</div>
+    <div class="amount">{{item?.amount | currency}}</div>
+  </div>
+  <div class="row">
+    <div class="key">Description</div>
+    <div class="value description">{{item?.description}} <span *ngIf='item?.pending'>(Pending)</span></div>
+  </div>
+  <div class="row button">
+    <button [disabled]='item?.pending' (click)="viewTransaction()">View Transaction</button>
+  </div>
+</div>
